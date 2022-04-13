@@ -8,16 +8,20 @@ const connect = function (data) {
 
   conn.on("connect", () => {
     console.log("Connected to server")
-  })
+  });
 
   conn.on("data", (data) => {
     console.log("Server says;", data)
-  })
+  });
 
 
   conn.on("connect", () => {
     conn.write("Name: Ana");
-  })
+  });
+
+  // conn.on("connect", () =>{
+  //   conn.write("Move: up")
+  // });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
