@@ -1,4 +1,5 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
 
 const connect = function (data) {
   console.log("Connecting ...");
@@ -20,7 +21,7 @@ const connect = function (data) {
     conn.write("Name: Ana");
   });
 
-  conn.on()
+  
 
 
 
