@@ -31,6 +31,7 @@ const handleUserInput = function (key) {
   connection.write("Move: right")
 }
 
+  connection.write("Say:  Hey there")
 }
 
 
