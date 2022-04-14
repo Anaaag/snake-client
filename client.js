@@ -1,4 +1,5 @@
 const net = require("net");
+
 const connect = function (data) {
   console.log("Connecting ...");
   const conn = net.createConnection({
@@ -11,7 +12,7 @@ const connect = function (data) {
   });
 
   conn.on("data", (data) => {
-    console.log("Server says;", data)
+    console.log("Server says", data)
   });
 
 
@@ -19,11 +20,11 @@ const connect = function (data) {
     conn.write("Name: Ana");
   });
 
-  // conn.on("connect", () =>{
-  //   conn.write("Move: up")
-  // });
+  conn.on()
 
-  // interpret incoming data as text
+
+
+
   conn.setEncoding("utf8");
 
 
@@ -31,6 +32,5 @@ const connect = function (data) {
   return conn;
 };
 
-connect();
 
-module.exports = connect;
+module.exports = {connect}
